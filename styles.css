@@ -1,0 +1,102 @@
+audio {
+	display: none;
+
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.main-horizontal {
+	width: 100%;
+	height: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.main-vertical {
+	height: 100%;	
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@keyframes anim-main-image-rotate {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(360deg);}
+}
+
+@keyframes anim-main-image-get-big {
+	from {transform: scale(0);}
+	to {transform: scale(1);}	
+}
+
+.main-image-container {
+  animation: anim-main-image-get-big 0.5s linear 0s;
+}
+
+.main-image {
+  height: 100%;
+  animation: anim-main-image-rotate 10s linear 0s infinite;
+}
+
+@keyframes anim-tony-image {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(180deg);}
+}
+
+.tony {
+  width: 75px;
+  height: 75px;
+}
+
+.tony-container, .tony-inner-container {
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+}
+
+.tony-top {
+  top: 15%;
+}
+
+.tony-bottom {
+  bottom: 15%;
+}
+
+.tony-left {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+  left: 15%;
+}
+
+.tony-right {
+  right: 15%;
+}
+
+.tony-image {
+  background-image: url("img/tony.png");
+  background-size: contain;
+  animation: anim-tony-image 1s steps(2) 0s infinite;
+}
+
+
+@keyframes anim-background {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+
+html {
+  animation-name: anim-background;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
