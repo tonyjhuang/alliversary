@@ -5,8 +5,8 @@
 	<link rel="stylesheet" href="styles.css">
         <script data-main="scripts/main" src="scripts/require.js"></script>
 </head>
-<body>
-	<audio controls>
+<body >
+	<audio controls autoplay>
 		<source src="trumpetz.mp3" type="audio/mpeg"></source>
 		Your browser does not support the audio element.
 	</audio>
@@ -39,7 +39,15 @@
 				<div class="tony tony-image tony-4"></div>
 			</div>	
 		</div>	
+		<div class="text-container">
+			<div class="text-inner-container">
+				<div class="text-image"></div>
+			</div>	
+		</div>	
 		<canvas id="viewport"></canvas>
 	</div>
+	<canvas id="confetti" width="1" height="1"></canvas>
+
+        <script src="scripts/helpers/confetti.js"></script>
 </body>
 </html>

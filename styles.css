@@ -35,17 +35,47 @@ audio {
 }
 
 .main-image-container {
-  animation: anim-main-image-get-big 10s linear 0s;
+  animation: anim-main-image-get-big 16s ease-in 0s;
 }
 
 .main-image {
   height: 100%;
-  animation: anim-main-image-rotate 10s linear 10s infinite;
+  animation: anim-main-image-rotate 10s linear 16s infinite;
 }
 
 @keyframes anim-tony-image {
   from {transform: rotate(0deg);}
   to {transform: rotate(180deg);}
+}
+
+
+@keyframes anim-text-image {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+.text-container, .text-inner-container {
+  width: 900px;
+    height: 50px;
+
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+  transform: scale(0);
+  animation: anim-main-image-get-big 2.5s linear 32s forwards;
+}
+
+.text-image {
+width: 900px;
+height: 70px;
+  background: url(img/text.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: anim-text-image 0.5s linear 32s 5;
 }
 
 .tony {
@@ -98,6 +128,15 @@ audio {
   position: absolute;
   left: 0;
   top: 0;
+}
+
+
+#confetti{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
 }
 
 @keyframes anim-background {
