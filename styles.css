@@ -35,12 +35,12 @@ audio {
 }
 
 .main-image-container {
-  animation: anim-main-image-get-big 0.5s linear 0s;
+  animation: anim-main-image-get-big 10s linear 0s;
 }
 
 .main-image {
   height: 100%;
-  animation: anim-main-image-rotate 10s linear 0s infinite;
+  animation: anim-main-image-rotate 10s linear 10s infinite;
 }
 
 @keyframes anim-tony-image {
@@ -57,6 +57,10 @@ audio {
   display: inline-block;
   vertical-align: middle;
   position: absolute;
+}
+
+.tony-inner-container {
+  animation: anim-main-image-get-big 3s linear 0s;
 }
 
 .tony-top {
