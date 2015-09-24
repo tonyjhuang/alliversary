@@ -83,7 +83,43 @@ height: 70px;
   height: 75px;
 }
 
-.tony-container, .tony-inner-container {
+.floating {
+ width: 100px;
+  height: 100px; 
+}
+
+.floating-container.floating-left {
+  top: 35%;
+  left: -15%;
+  animation: anim-floating-ltr 5s linear 24s;
+}
+
+.floating-container.floating-right {
+  right: -15%;
+  top:55%;
+  animation: anim-floating-ltr 5s linear 24s reverse;
+}
+
+
+@keyframes anim-floating-ltr {
+  from { left: -15%;}
+  to { left: 115%;}
+}
+
+.floating-1 {
+  background-image: url("img/floating-alli.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.floating-2 {
+ background-image: url("img/floating-tony.png"); 
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.tony-container, .tony-inner-container, 
+.floating-container, .floating-inner-container {
   display: inline-block;
   vertical-align: middle;
   position: absolute;
